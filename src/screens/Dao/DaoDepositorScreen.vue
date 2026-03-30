@@ -1,17 +1,25 @@
 <template>
-    <div style="margin:0px;padding:0px;overflow:hidden">
-        <iframe
-            id="frame"
-            frameborder="0"
-            style="overflow:hidden; height: 90vh;width:100%"
-            height="100%"
-            width="100%"
-            src="https://srv1.1clickdao.com/"
-            align="left"
-        >
-            Ваш браузер не поддерживает плавающие фреймы!
-        </iframe>
-    </div>
+    <v-container fluid>
+        <v-row justify="center" class="pa-8">
+            <v-col cols="12" md="8">
+                <v-card outlined>
+                    <v-card-title class="text-h6">
+                        Ссылка на внешний интерфейс (iframe) больше не работает
+                    </v-card-title>
+                    <v-card-text>
+                        Мы отключили встраивание по старому URL. Сейчас актуальная информация и
+                        функциональность доступны в разделе About.
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-spacer />
+                        <v-btn color="primary" @click="$router.push('/about')">
+                            Перейти в About
+                        </v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-col>
+        </v-row>
+    </v-container>
     <!--
     <v-container class="investors" fluid>
         <h1 class="investors__title">For Depositors</h1>
@@ -24,13 +32,9 @@
 <script>
 // import DaoTable from '_features/dao/components/DaoTable'
 
-    export default {
-        name: 'DaoDepositorScreen',
-
-        components: {
-        // DaoTable,
-        },
-    }
+export default {
+    name: 'DaoDepositorScreen',
+}
 </script>
 
 <style lang="scss">

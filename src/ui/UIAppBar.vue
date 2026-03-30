@@ -117,7 +117,7 @@
             v-if="isMainPage"
             class="mr-4"
             color="primary"
-            @click="$router.push('/dao')"
+            @click="$router.push('/about')"
         >
             <div class="launch-up-startup">
                 <span class="launch-up-text">Launch App</span>
