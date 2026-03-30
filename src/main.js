@@ -13,7 +13,7 @@ Vue.config.productionTip = false;
 // TODO: Vuetify bug
 const ignoreWarnMessage =
     'The .native modifier for v-on is only valid on components but it was used on <svg>.';
-Vue.config.warnHandler = function(msg, vm, trace) {
+Vue.config.warnHandler = function (msg, vm, trace) {
     // `trace` is the component hierarchy trace
     if (msg === ignoreWarnMessage) {
         msg = null;
